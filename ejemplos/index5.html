@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Lista de Paises</h1>
+            <select name="slPaises" id="slPaises">
+                <!-- Aquí se insertarán las opciones de países dinámicamente -->
+
+            </select>
+        </div>
+        <div class="country-content">
+            <!-- Aquí se mostrará la información del país seleccionado -->
+            <table id="countries-info" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Capital</th>
+                        <th>Población</th>
+                        <th>Moneda</th>
+                        <th>Idioma</th>
+                        <th>Bandera</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyCountries">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Capital</th>
+                        <th>Población</th>
+                        <th>Moneda</th>
+                        <th>Idioma</th>
+                        <th>Bandera</th>
+                    </tr>
+                </tfoot>
+            </table>
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+    <script src="eje06_fetch_restcountriesApi.js"></script>
+    <!-- <script src="js/jquery3.7.1.js"></script> -->
+    
+</body>
+</html>
+
+<!-- API: https://restcountries.com/ -->
