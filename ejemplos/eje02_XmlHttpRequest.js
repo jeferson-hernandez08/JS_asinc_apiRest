@@ -1,5 +1,5 @@
 function ajax() {
-    // Se cre objeto ForData para representar datos de formulario
+    // Se cre objeto ForData para representar datos de formulario | Commit
     let data = new FormData();
     data.append('num1', 3);     // append: Agregar datos un formulario | Se agrega un dato al formulario
     data.append('num2', 8);     // append: Agregar datos un formulario | Se agrega un dato al formulario
