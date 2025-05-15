@@ -47,28 +47,32 @@ app.use(morgan('dev'));                            // La opcion dev de la inform
 //app.use(morgan('common'));                           // La opcion common de la informacion principal.
 
 // Routes del api
+// Ritas de usuarios para la v1 del API
+app.use('/api/v1/users', require('./api/v1/user.routes'));    // Ruta para users
+
+// Rutas del API
 // Se configura una ruta sencilla a traves del metodo GET para probar 
-app.get('/', (req, resp) => {
-    /* 
-        req = request  => Es la petición del usuario (contiene datos de la solicitud del cliente)
-        res = response => Es la respuesta del servidor al usuario (para enviar respuesta al cliente)
-    */
-    resp.send({
-        status: 200,
-        message: 'Prueba de API exitosa'    // Envio del formato JSON
-    });
-});  
+// app.get('/', (req, resp) => {
+//     /* 
+//         req = request  => Es la petición del usuario (contiene datos de la solicitud del cliente)
+//         res = response => Es la respuesta del servidor al usuario (para enviar respuesta al cliente)
+//     */
+//     resp.send({
+//         status: 200,
+//         message: 'Prueba de API exitosa'    // Envio del formato JSON
+//     });
+// });  
 
 // Ruta de saludos personalizada
-app.get('/saludos', (req, resp) => {
-    /*
-        Endpoint que devuelve un saludo específico
-    */
-    resp.send({
-        status: 200,
-        message: 'Hello ADSO 2873711'
-    });
-});  
+// app.get('/saludos', (req, resp) => {
+//     /*
+//         Endpoint que devuelve un saludo específico
+//     */
+//     resp.send({
+//         status: 200,
+//         message: 'Hello ADSO 2873711'
+//     });
+// });  
 
 // Nueva ruta
 // app.post('newUserTest', (req, resp) => {
