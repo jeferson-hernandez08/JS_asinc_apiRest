@@ -34,6 +34,11 @@ const app = express();                        // Crear una instancia de la aplic
 const bodyParser = require('body-parser');    // Importar body-parser para manejar datos JSON
 const morgan = require('morgan');              // Middleware que informa sobre las peticiones del servidoor
 
+if (process.env.NODE_ENV !== 'production') {
+    // Cargamos las variables de entorno
+    require('dotenv').config();                // Cargar variables de entorno desde el archivo .env
+}
+
 // Configurar el puerto (usa variable de entorno o 4080 por defecto)
 app.set('port', process.env.PORT || 4000);          // Buenas prácticas para despliegues en la nube
 
